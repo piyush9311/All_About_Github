@@ -79,3 +79,7 @@ git diff <source-branch> <target-branch>
 To list down all the present conflicts, use:
 
 git diff
+
+To delete a repository created using init, use:
+
+rmdir.git
