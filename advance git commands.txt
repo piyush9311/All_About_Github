@@ -35,3 +35,6 @@ Consider git cherry-pick. It lets you take a given commit — any commit, from a
 You made a commit to the wrong branch, and you want to apply it quickly to the right one.
 You want to apply a fix from a branch to trunk before continuing with other work on trunk code.
 Note that you have some options besides directly applying the commit when you cherry-pick it. If you pass the --no-commit option, for instance, the cherry-picked commit is placed in the staging area of the current branch. 
+
+git branch --merged | egrep -v "(*|master|dev)" | xargs git branch -d
+This set of commands is a magic wand and lifesaver to delete already merged branches.
