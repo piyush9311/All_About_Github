@@ -1,0 +1,103 @@
+git reset --hard vs –soft
+If you want to reset the current branch head or state to <specific commit> git reset is your friend. git reset offers a lot of options that you must checkout but the most popular ones are --hard and --soft.
+ 
+
+git reset --hard :-  It Resets the index and working branch to last commit. Any changes to tracked files in the working branch since <commit> are discarded.
+
+ 
+
+git reset --soft :- It does not touch the index file nor the working branch at all but resets the head to <commit>.
+
+
+ 
+
+git rebase
+It Forwards-port local commits to the updated upstream head. But what does that mean?
+
+ 
+
+Let's say if git rebase <branch> is specified, git rebase will perform an automatic git checkout <branch> before doing anything else. Otherwise it remains on the current branch.
+
+ 
+
+If remote <upstream> is not specified, the remote configured in branch.<name>.remote and branch.<name>.merge options will be used.  If you are currently not on any branch or if the current branch does not have a configured remote, the rebase will abort.
+
+ 
+
+It's very much flexible in updating your current branch with the main branch.
+
+
+ 
+
+git clone [branch_name]  [remote_url_path]
+Sometimes during development you wish to clone only specific branch from a remote repository without having to clone whole of the repository branches, the above command will be useful for that.
+
+ 
+
+git apply [patch-name].patch:
+To apply patch using Git
+
+ 
+
+git cherry
+If your branch changes are part of the other branch, then this will let you check whether your branch changes are present in some other branch or not. It is indicated with a + or – sign to verify if that commit is merged or not.
+
+ 
+
+git cherry -v  other_branch_name
+
+ 
+
+For example: to check with master branch
+
+ 
+
+git cherry -v master
+
+ 
+
+git diff
+Whenever you have a modified code, always check changes with git diff in order to detect the modified changes.
+ 
+
+git update-index
+By this command, you can ask git to ignore the changes to specific file. So next time you do
+
+merge, this file won’t be changed or modified on your system.
+
+ 
+
+git update-index --assume-unchanged path_to_file
+
+ 
+
+To again keep that file back for tracking
+ 
+
+git update-index --assume-changed path_to_file
+
+ 
+
+git pull --rebase
+If you are working in a team and there are lots of changes in the code, then you need to update your branches with lots of log messages. But in the scenario of multiple team members working on the same branch, the regular merge causes multiple merge messages in the log causing ambiguity. Hence, use rebase with pull to keep the history clear of useless merge messages.
+ 
+
+git config :- First time git setup
+So, you are done with installing git. It is always recommended that you should tell git your information like name, email-id. so that it will keep track of your commits. It also helps in checking git logs. You can also explore other options with git config.
+
+ 
+
+git config --global user.name "ABC"
+git config --global user.email abc@gmail.com
+
+ 
+
+git log
+If you want to check the history of your code repository then this is the command what you need. You can also filter the history with other options of git log like
+ 
+
+git log --author [author-name]
+
+Also, some of the git tools you should use for checking the git tracking.
+
+gitk //install it by apt-get install gitk  depends on linux distribution
