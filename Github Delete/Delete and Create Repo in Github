@@ -1,0 +1,18 @@
+Deleting a Repo on Github:
+
+Go to your account on Github and to the repository you want to delete.
+Go to the settings tab in your repository.
+Scroll all the way to the bottom of the page until you see the Danger Zone section. 
+Here, click Delete this repository (Shown in RED).
+You'll now see a pop up asking if you're sure you want to delete the repository. 
+Enter the name of the repository in the text box
+Click the I understand the consequences, delete this repository button.
+
+
+Creating a repository on Github:
+
+Make a Github account and login.
+Click on the '+' sign on the navigation bar and from the dropdown select new repository.
+After clicking new repository option, you will have to initialize some things like, naming your project, choosing the visibility etc. 
+After performing these steps click Create Repository button.
+
